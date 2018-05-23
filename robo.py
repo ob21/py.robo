@@ -78,13 +78,27 @@ results = browser.find_all("section", attrs={"class":"item_infos"})
 
 #print(str(results))
 
+print("------------------------")
+print("section = " + str(results[0]))
+print("----------")
+print("title = " + results[0].findAll("h2")[0].text.strip())
+print("----------")
+print("price = " + results[0].findAll("h3")[0].text.strip())
+print("----------")
+print("location = " + str(results[0].findAll("p", attrs={"itemprop":"availableAtOrFrom"})[0].text.strip().replace(" ","").replace("\n","")))
+
 for result in results:
- print("---")
- print(result)
- print("-")
- print(result.findAll("p")[0].string)
- print("-")
- print(result.findAll("p")[1].string)
+ print("------------------------")
+ #print("section = " + str(result))
+ #print("----------")
+ #print(result)
+ #print(result.find("h2"))
+ if result.find("h2") != None:
+  print("title = " + result.findAll("h2")[0].text.strip())
+  print("-")
+  print("price = " + result.findAll("h3")[0].text.strip())
+  print("-")
+  print("location = " + str(result.findAll("p", attrs={"itemprop":"availableAtOrFrom"})[0].text.strip().replace(" ","").replace("\n","")))
 
 #print(item_infos[0])
 
