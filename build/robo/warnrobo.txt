@@ -1,0 +1,68 @@
+missing module named 'multiprocessing.forking' - imported by /usr/local/lib/python3.5/dist-packages/PyInstaller/loader/rthooks/pyi_rth_multiprocessing.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named pyimod03_importers - imported by /usr/local/lib/python3.5/dist-packages/PyInstaller/loader/rthooks/pyi_rth_pkgres.py
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named StringIO - imported by six, requests.compat, werkzeug._compat, pkg_resources._vendor.six
+missing module named __builtin__ - imported by werkzeug._compat, pkg_resources._vendor.pyparsing
+missing module named __main__ - imported by pkg_resources
+missing module named _sysconfigdata_dm - imported by _sysconfigdata
+missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources
+missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, pkg_resources._vendor.packaging.requirements
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources
+missing module named 'org.python' - imported by pickle, xml.sax, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named ce - imported by os, /home/opob7414/_workdev/python/py.robo/robo.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named _winreg - imported by platform, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named vms_lib - imported by platform, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named msvcrt - imported by subprocess, getpass, multiprocessing.spawn, multiprocessing.popen_spawn_win32, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named _winapi - imported by subprocess, multiprocessing.reduction, multiprocessing.connection, multiprocessing.heap, multiprocessing.popen_spawn_win32, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named winreg - imported by platform, mimetypes, urllib.request, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named urllib.proxy_bypass - imported by urllib, requests.compat
+missing module named urllib.getproxies - imported by urllib, requests.compat
+missing module named urllib.unquote_plus - imported by urllib, requests.compat
+missing module named urllib.quote_plus - imported by urllib, requests.compat
+missing module named urllib.unquote - imported by urllib, requests.compat
+missing module named urllib.quote - imported by urllib, requests.compat
+missing module named urllib.urlencode - imported by urllib, urllib3.request, requests.compat
+missing module named _dummy_threading - imported by dummy_threading, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named nt - imported by os, ntpath, shutil, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named org - imported by copy, /home/opob7414/_workdev/python/py.robo/robo.py
+missing module named httplib - imported by urllib3.connection, requests.compat, werkzeug.wsgi
+missing module named Cookie - imported by requests.compat
+missing module named cookielib - imported by requests.compat, werkzeug.test
+missing module named urllib2 - imported by requests.compat, werkzeug.http, werkzeug.test
+missing module named urlparse - imported by urllib3.poolmanager, requests.compat, robobrowser.compat
+missing module named simplejson - imported by requests.compat
+runtime module named six.moves - imported by urllib3.util.response, urllib3.response, html5lib.inputstream
+missing module named backports - imported by urllib3.packages.ssl_match_hostname
+missing module named _abcoll - imported by urllib3.packages.ordered_dict
+missing module named dummy_thread - imported by urllib3.packages.ordered_dict
+missing module named thread - imported by urllib3.packages.ordered_dict
+missing module named 'ctypes.macholib' - imported by ctypes.util
+missing module named netbios - imported by uuid
+missing module named win32wnet - imported by uuid
+missing module named Queue - imported by urllib3.connectionpool
+missing module named certifi - imported by requests.certs
+missing module named 'requests.packages.urllib3' - imported by requests, requests.compat, requests.exceptions, requests.models, requests.sessions, requests.adapters, robobrowser.browser
+missing module named htmlentitydefs - imported by werkzeug.utils
+missing module named 'email.Utils' - imported by werkzeug.http
+missing module named cStringIO - imported by werkzeug._compat
+missing module named copy_reg - imported by cStringIO
+missing module named UserDict - imported by robobrowser.ordereddict
+missing module named werkzeug.cached_property - imported by werkzeug, robobrowser.browser
+missing module named iconv_codec - imported by bs4.dammit
+missing module named cchardet - imported by bs4.dammit
+missing module named ordereddict - imported by html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes
+missing module named 'genshi.core' - imported by html5lib.treewalkers.genshistream
+missing module named genshi - imported by html5lib.treewalkers.genshistream
+missing module named datrie - imported by html5lib.trie.datrie
+missing module named charade - imported by html5lib.inputstream
