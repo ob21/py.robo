@@ -8,6 +8,7 @@ import tkinter
 from robobrowser import RoboBrowser
 from requests import Session
 import re
+import sys
 
 
 class simpleapp_tk(tkinter.Tk):
@@ -29,23 +30,24 @@ class simpleapp_tk(tkinter.Tk):
                                 command=self.OnButtonClick)
         button.grid(column=1,row=0, columnspan=2)
 
-        #self.labelVariable = tkinter.StringVar()        #label = tkinter.Label(self,textvariable=self.labelVariable,
-        #                      anchor="w",justify="left", fg="white",bg="black")
-        #label.grid(column=0,row=1,columnspan=2,sticky='EW')
-        #self.labelVariable.set(u"Resultats (label)...")
+        self.labelVariable = tkinter.StringVar()        
+        label = tkinter.Label(self,textvariable=self.labelVariable,
+                              anchor="w",justify="left", fg="black",bg="grey")
+        label.grid(column=0,row=2,columnspan=2,sticky='EW')
+        self.labelVariable.set(u"Annonces en Ille et Vilaine")
         
         self.listVariable = tkinter.StringVar();
         scrollbar = tkinter.Scrollbar(self, orient="vertical")        
-        scrollbar.grid(row=2, column=2, sticky="NS")
+        scrollbar.grid(row=3, column=2, sticky="NS")
         listbox = tkinter.Listbox(self, fg="white",bg="black", height=24, listvariable = self.listVariable, yscrollcommand=scrollbar.set)
-        listbox.grid(row=2, column=0, columnspan=2, sticky='NESW')
+        listbox.grid(row=3, column=0, columnspan=2, sticky='NESW')
         scrollbar["command"] = listbox.yview
 
         self.grid_columnconfigure(0,weight=1)
         self.resizable(True,False)
         self.update()
         #self.geometry(self.geometry())       
-        self.geometry("600x400") 
+        self.geometry("1000x400") 
         self.entry.focus_set()
         self.entry.selection_range(0, tkinter.END)
         
@@ -99,16 +101,32 @@ class simpleapp_tk(tkinter.Tk):
         #self.labelVariable.set( self.entryVariable.get()+" (You clicked the button)" )
         print("onclick text = "+self.entryVariable.get())
         #self.labelVariable.set( self.SearchLbc(str(self.entryVariable.get())) )
-        self.listVariable.set(self.SearchLbc2(str(self.entryVariable.get())))
-        self.entry.focus_set()
-        self.entry.selection_range(0, tkinter.END)
+        try:
+            print("try to get results")
+            results = self.SearchLbc2(str(self.entryVariable.get()))
+        except:
+            print("except")
+            results = "error : " + str(sys.exc_info()[0])
+        finally:
+            print("finally")
+            self.listVariable.set(results)
+            self.entry.focus_set()
+            self.entry.selection_range(0, tkinter.END)
 
     def OnPressEnter(self,event):
         print("onenter text = "+self.entryVariable.get())
         #self.labelVariable.set( self.SearchLbc(str(self.entryVariable.get())) )
-        self.listVariable.set(self.SearchLbc2(str(self.entryVariable.get())))
-        self.entry.focus_set()
-        self.entry.selection_range(0, tkinter.END)
+        try:
+            print("try to get results")
+            results = self.SearchLbc2(str(self.entryVariable.get()))
+        except:
+            print("except")
+            results = "error : "+ str(sys.exc_info()[0])
+        finally:
+            print("finally")
+            self.listVariable.set(results)
+            self.entry.focus_set()
+            self.entry.selection_range(0, tkinter.END)
 
 if __name__ == "__main__":
     app = simpleapp_tk(None)
