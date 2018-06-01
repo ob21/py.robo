@@ -48,7 +48,7 @@ class simpleapp_tk(tkinter.Tk):
         label = tkinter.Label(self,textvariable=self.labelTitleResultVariable,
                               anchor="w",justify="left", fg="black",bg="grey")
         label.grid(column=0,row=4,columnspan=3,sticky='EW')
-        self.labelTitleResultVariable.set(u"Mots courants")
+        self.labelTitleResultVariable.set(u"Mots secondaires courants")
         
         self.labelResultVariable = tkinter.StringVar()        
         label = tkinter.Label(self,textvariable=self.labelResultVariable,
@@ -73,7 +73,7 @@ class simpleapp_tk(tkinter.Tk):
      search_result=[]
      for result in results:
       if result.find("h2") != None:
-       print("-----------"+str(result))
+       #print("-----------"+str(result))
        i=i+1
        title = result.h2.text.strip()
        price=""
@@ -92,10 +92,19 @@ class simpleapp_tk(tkinter.Tk):
         for result in results:
          title = result.split(" -|- ")[1]
          print(result.split(" -|- ")[1])
-         words.extend(title.split(" "))
-        words.remove("-")
-        words.remove("de")
-        words.remove(str(self.entryVariable.get()))
+         words.extend(title.lower().split(" "))
+        while "-" in words:
+         words.remove("-")
+        while "de" in words:
+         words.remove("de")
+        while "à" in words:
+         words.remove("à")     
+        while "pour" in words:
+         words.remove("pour")                  
+        q = str(self.entryVariable.get())
+        while q in words:
+         words.remove(q)
+        print(words)
         counts = Counter(words)        
         print("counts" + str(counts))
         return counts
@@ -113,6 +122,7 @@ class simpleapp_tk(tkinter.Tk):
         except:
             print("except")
             results = "error : " + str(sys.exc_info()[0])
+            results = "      : " + str(sys.exc_info()[1])
         finally:
             print("finally")
             self.listVariable.set(results)
@@ -129,7 +139,7 @@ class simpleapp_tk(tkinter.Tk):
             if not results:
              results = "aucun resultat"
             else:
-             analyze = str(self.FindWordsCounts(results).most_common(8))
+             analyze = str(self.FindWordsCounts(results).most_common(10))
         except:
             print("except")
             results = "error : "+ str(sys.exc_info()[0])
